@@ -16,14 +16,10 @@ jobs:
   Markdown2:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Install PSScriptAnalyzer module
-        shell: pwsh
-        run: |
-          Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module PSScriptAnalyzer -ErrorAction Stop
-      - name: Get list of rules
-        shell: pwsh
-        run: |
-          Get-ScriptAnalyzerRule
+      - name: Install markdown2
+        run: pip install markdown2
+        
+      - name: Test markdown2
+        run: markdown2 -h
+
       
