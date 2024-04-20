@@ -22,4 +22,13 @@ jobs:
       - name: Test markdown2
         run: markdown2 -h
 
+  GitHub_Repo:
+    runs-on: windows-latest
+    steps:
+      - name: Clone Repo
+        uses: action/checkout@v1
+
+      - name: check repo
+        run: dir
+
       
