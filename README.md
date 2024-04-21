@@ -3,4 +3,3 @@
 - :seedling: I&rsquo;m currently learning  -> DevOPS / MLOPS, C, Blender, Git
 - :mailbox: How to reach me -> xapwave@gmail.com
 
-
