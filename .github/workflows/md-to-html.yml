@@ -34,7 +34,12 @@ jobs:
       - name: Check repo
         run: dir
 
-      - name: Upload to GCS
-        run: gsutil -h
+      - uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: xapiwave_bucket
+          APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        with:
+          args: cp README.html gs://xapiwave_bucket
+          cli: gsutil
 
       
