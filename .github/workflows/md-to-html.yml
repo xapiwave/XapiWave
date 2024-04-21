@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   Markdown2:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Install markdown2
         run: pip install markdown2
@@ -26,13 +26,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Check repo
-        run: dir
+        run: ls -la
 
       - name: Convert md file to HTML
         run: markdown2 ./README.md > ./README.html
 
       - name: Check repo
-        run: dir
+        run: ls -la
 
       - uses: actions-hub/gcloud@master
         env:
