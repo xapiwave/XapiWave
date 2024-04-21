@@ -24,7 +24,7 @@ jobs:
 
   GitHub_Repo:
     runs-on: windows-latest
-    needs: [ Markdown2 ]
+    needs: [Markdown2]
     
     steps:
       - name: Clone Repo
