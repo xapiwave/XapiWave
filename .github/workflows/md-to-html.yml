@@ -30,7 +30,7 @@ jobs:
       - name: Clone Repo
       - uses: action/checkout@v3
 
-      - name: check repo
-        run: dir
+#      - name: check repo
+#        run: dir
 
       
