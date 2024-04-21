@@ -23,7 +23,7 @@ jobs:
         run: markdown2 -h
 
       - name: Clone Repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v1
 
       - name: Check repo
         run: ls -la
