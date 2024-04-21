@@ -34,9 +34,10 @@ jobs:
       - name: Check repo
         run: ls -la
 
-      - uses: actions-hub/gcloud@master
+      - name: Install gsutil (GCS)
+        uses: actions-hub/gcloud@master
         env:
-          PROJECT_ID: xapiwave_bucket
+          PROJECT_ID: 110494604927956064015
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         with:
           args: cp README.html gs://xapiwave_bucket
