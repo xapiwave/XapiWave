@@ -23,13 +23,13 @@ jobs:
         run: markdown2 -h
 
       - name: Clone Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
 
       - name: Check repo
         run: ls -la
 
       - name: Convert md file to HTML
-        run: markdown2 ./README.md > ./README.html
+        run: markdown2 --encode utf-8 ./README.md > ./README.html
 
       - name: Check repo
         run: ls -la
