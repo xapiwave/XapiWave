@@ -22,17 +22,17 @@ jobs:
       - name: Test markdown2
         run: markdown2 -h
 
-  GitHub_Repo:
-    runs-on: windows-latest
-    needs: [Markdown2]
-    permissions:
-      contents: read
-    
-    steps:
       - name: Clone Repo
         uses: actions/checkout@v3
 
       - name: check repo
         run: dir
+
+      - name: Convert md file to HTML
+        run: markdown2 README.md > README.html
+
+      - name: check repo
+        run: dir
+      
 
       
