@@ -37,7 +37,7 @@ jobs:
       - name: Install gsutil (GCS)
         uses: actions-hub/gcloud@master
         env:
-          PROJECT_ID: 110494604927956064015
+          PROJECT_ID: round-bounty-415820
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         with:
           args: cp README.html gs://xapiwave_bucket
