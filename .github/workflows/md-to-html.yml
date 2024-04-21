@@ -25,6 +25,8 @@ jobs:
   GitHub_Repo:
     runs-on: windows-latest
     needs: [Markdown2]
+    permissions:
+      contents: read
     
     steps:
       - name: Clone Repo
